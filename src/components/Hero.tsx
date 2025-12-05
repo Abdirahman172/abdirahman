@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDownIcon, SparklesIcon } from '@heroicons/react/24/outline';
 import phot from '../images/hero.jpg';
+import cv from '../images/Abdirahmancv.pdf';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -11,9 +12,8 @@ const Hero = () => {
     }
   };
 
-  const openCV = () => {
-    alert('CV functionality will be implemented with actual PDF file');
-  };
+  // Remove the alert and openCV function, replace with direct download
+  // The cv import is already the URL to the PDF file
 
   // Floating particles data
   const particles = Array.from({ length: 20 }, (_, i) => ({
@@ -180,15 +180,17 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
               >
-                <motion.button
-                  onClick={openCV}
-                  className="relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl"
+                {/* CV Download Button - Updated to use anchor tag */}
+                <motion.a
+                  href={cv}
+                  download="Abdirahman_CV.pdf"
+                  className="relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl text-center no-underline"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
                   <span className="flex items-center justify-center space-x-2 relative z-10">
-                    <span>View CV</span>
+                    <span>Download CV</span>
                     <motion.div
                       animate={{ y: [0, 5, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
@@ -196,7 +198,7 @@ const Hero = () => {
                       <ArrowDownIcon className="w-5 h-5" />
                     </motion.div>
                   </span>
-                </motion.button>
+                </motion.a>
 
                 <motion.button
                   onClick={scrollToContact}

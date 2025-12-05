@@ -501,7 +501,7 @@ const Contact = () => {
       >
         {/* WhatsApp Quick Contact */}
         <motion.a
-          href="https://wa.me/60123456789"
+          href="https://wa.me/+601113084010"
           className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-4 rounded-2xl shadow-2xl flex items-center space-x-2"
           whileHover={{ 
             scale: 1.1,
@@ -520,7 +520,7 @@ const Contact = () => {
 
         {/* Email Quick Contact */}
         <motion.a
-          href="mailto:abdirahman@example.com"
+          href="mailto:abdirihmanibrahim242@gmail.com"
           className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-2xl shadow-2xl flex items-center space-x-2"
           whileHover={{ 
             scale: 1.1,
