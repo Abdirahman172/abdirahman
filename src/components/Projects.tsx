@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { XMarkIcon, ArrowTopRightOnSquareIcon, CodeBracketIcon, RocketLaunchIcon, SparklesIcon, EyeIcon } from '@heroicons/react/24/outline';
+import project1 from '../images/project-1.svg';
+import project2 from '../images/project-2.svg';
+import project3 from '../images/project-3.svg';
+import project4 from '../images/project-4.svg';
+import project5 from '../images/project-5.svg';
+import project6 from '../images/project-6.svg';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -140,6 +146,15 @@ const Projects = () => {
       emoji: ''
     },
   ];
+
+  const imageMap: Record<string, string> = {
+    'project-1': project1,
+    'project-2': project2,
+    'project-3': project3,
+    'project-4': project4,
+    'project-5': project5,
+    'project-6': project6,
+  };
 
   const categories = [
     { id: 'all', name: 'All Projects', emoji: '' },
@@ -372,24 +387,32 @@ const Projects = () => {
                 className="relative overflow-hidden rounded-3xl backdrop-blur-sm bg-white/5 border border-white/10 hover:border-cyan-400 transition-all duration-500"
                 onClick={() => setSelectedProject(project)}
               >
-                {/* Project Image/Emoji Header */}
+                {/* Project Image Header (uses SVG assets) */}
                 <div className="relative aspect-video bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0 flex items-center justify-center"
-                    whileHover={{ scale: 1.1 }}
-                  >
+                  {imageMap[project.image] ? (
+                    <img
+                      src={imageMap[project.image]}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
                     <motion.div
-                      className="text-6xl"
-                      animate={{ 
-                        rotate: [0, 10, -10, 0],
-                        scale: [1, 1.2, 1]
-                      }}
-                      transition={{ duration: 5, repeat: Infinity }}
+                      className="absolute inset-0 flex items-center justify-center"
+                      whileHover={{ scale: 1.1 }}
                     >
-                      {project.emoji}
+                      <motion.div
+                        className="text-6xl"
+                        animate={{ 
+                          rotate: [0, 10, -10, 0],
+                          scale: [1, 1.2, 1]
+                        }}
+                        transition={{ duration: 5, repeat: Infinity }}
+                      >
+                        {project.emoji}
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                  
+                  )}
+
                   {/* Hover Overlay */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-cyan-500/40 to-purple-500/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
