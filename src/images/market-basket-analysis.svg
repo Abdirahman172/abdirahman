@@ -1,0 +1,68 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c2d12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg4)" rx="20"/>
+  
+  <!-- Shopping basket -->
+  <path d="M150 120 Q150 110 160 110 L240 110 Q250 110 250 120 L260 180 Q260 190 250 190 L160 190 Q150 190 150 180 Z" fill="#1f2937" opacity="0.8"/>
+  <path d="M150 120 L250 120 L260 180 L150 180 Z" fill="#374151" opacity="0.6"/>
+  
+  <!-- Basket handle -->
+  <path d="M140 120 Q140 100 160 100" stroke="#6b7280" stroke-width="4" fill="none"/>
+  <path d="M250 100 Q270 100 270 120" stroke="#6b7280" stroke-width="4" fill="none"/>
+  
+  <!-- Items in basket -->
+  <circle cx="180" cy="140" r="8" fill="#ef4444"/> <!-- Apple -->
+  <rect x="190" y="135" width="15" height="10" fill="#fbbf24" rx="2"/> <!-- Bread -->
+  <circle cx="220" cy="145" r="6" fill="#22c55e"/> <!-- Vegetable -->
+  <rect x="200" y="155" width="12" height="8" fill="#8b5cf6" rx="2"/> <!-- Package -->
+  <circle cx="230" cy="160" r="7" fill="#f97316"/> <!-- Orange -->
+  
+  <!-- Data visualization charts -->
+  <!-- Bar chart -->
+  <rect x="50" y="80" width="80" height="60" fill="#1f2937" opacity="0.9" rx="5"/>
+  <rect x="55" y="120" width="8" height="15" fill="#22d3ee"/>
+  <rect x="66" y="110" width="8" height="25" fill="#10b981"/>
+  <rect x="77" y="125" width="8" height="10" fill="#f59e0b"/>
+  <rect x="88" y="105" width="8" height="30" fill="#ef4444"/>
+  <rect x="99" y="115" width="8" height="20" fill="#8b5cf6"/>
+  <rect x="110" y="130" width="8" height="5" fill="#06b6d4"/>
+  
+  <!-- Pie chart -->
+  <circle cx="330" cy="110" r="30" fill="#1f2937" opacity="0.9"/>
+  <path d="M330 80 A30 30 0 0 1 350 125 L330 110 Z" fill="#22d3ee"/>
+  <path d="M350 125 A30 30 0 0 1 320 135 L330 110 Z" fill="#10b981"/>
+  <path d="M320 135 A30 30 0 0 1 310 95 L330 110 Z" fill="#f59e0b"/>
+  <path d="M310 95 A30 30 0 1 1 330 80 L330 110 Z" fill="#ef4444"/>
+  
+  <!-- Network/Association lines -->
+  <line x1="180" y1="140" x2="220" y2="145" stroke="#22d3ee" stroke-width="2" opacity="0.7"/>
+  <line x1="200" y1="150" x2="230" y2="160" stroke="#10b981" stroke-width="2" opacity="0.7"/>
+  <line x1="180" y1="140" x2="200" y2="155" stroke="#f59e0b" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Analytics dashboard -->
+  <rect x="80" y="200" width="240" height="60" fill="#1f2937" opacity="0.9" rx="8"/>
+  
+  <!-- Dashboard metrics -->
+  <text x="100" y="220" fill="#22d3ee" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Confidence: 85%</text>
+  <text x="100" y="235" fill="#10b981" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Support: 12%</text>
+  <text x="100" y="250" fill="#f59e0b" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Lift: 2.3x</text>
+  
+  <text x="220" y="220" fill="#ef4444" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Frequent Items</text>
+  <text x="220" y="235" fill="#8b5cf6" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Cross-sell Rate</text>
+  <text x="220" y="250" fill="#06b6d4" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Revenue Impact</text>
+  
+  <!-- Algorithm symbols -->
+  <text x="50" y="50" fill="#22d3ee" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Apriori</text>
+  <text x="320" y="50" fill="#10b981" font-family="Arial, sans-serif" font-size="12" font-weight="bold">FP-Growth</text>
+  
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Market Basket Analysis</text>
+  <text x="200" y="285" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="12">Pattern Mining • Customer Insights • ML</text>
+</svg>

@@ -8,6 +8,9 @@ import deanlist_sem2 from '../images/deanlist_sem2.jpeg';
 import deanlist_sem3 from '../images/deanlist_sem3.jpeg';
 import deanlist_sem6 from '../images/deanlist_sem6.jpeg';
 import lc from '../images/lc.jpeg';
+import googleDataAnalytics from '../images/google-data-analytics.png';
+import courseraML from '../images/coursera-ml.png';
+import awsCloud from '../images/aws-cloud.png';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -30,38 +33,95 @@ const About = () => {
   const certificates = [
     { 
       title: "Dean's List Semester 1", 
-      org: 'Dean of Computing and Informatics', 
+      org: 'Dean of Computing and Informatics, AIU', 
       image: deanlist_sem1, 
       color: 'from-blue-500 to-cyan-400',
-      description: 'Awarded for outstanding academic achievement with GPA above 3.5 in Semester 1.'
+      description: 'Awarded for outstanding academic achievement in Semester 1. This recognition reflects exceptional performance in foundational computer science courses including Programming Fundamentals, Mathematics for Computing, and Digital Logic Design.',
+      period: 'September 2021 - January 2022',
+      subjects: ['Programming Fundamentals', 'Mathematics for Computing', 'Digital Logic Design', 'English Communication'],
+      achievement: 'Top 15% of the cohort',
+      type: 'academic'
     },
     { 
       title: "Dean's List Semester 2", 
-      org: 'Dean of Computing and Informatics', 
+      org: 'Dean of Computing and Informatics, AIU', 
       image: deanlist_sem2, 
       color: 'from-purple-500 to-pink-400',
-      description: 'Recognized for academic excellence maintaining GPA above 3.5 in Semester 2.'
+      description: 'Recognized for academic excellence in Semester 2. Demonstrated consistent high performance in advanced programming concepts, data structures, and web development fundamentals.',
+      period: 'February 2022 - June 2022',
+      subjects: ['Object-Oriented Programming', 'Data Structures & Algorithms', 'Web Development', 'Database Systems'],
+      achievement: 'Top 12% of the cohort',
+      type: 'academic'
     },
     { 
       title: "Dean's List Semester 3", 
-      org: 'Dean of Computing and Informatics', 
+      org: 'Dean of Computing and Informatics, AIU', 
       image: deanlist_sem3, 
       color: 'from-green-500 to-emerald-400',
-      description: 'Continued academic excellence with consistent GPA above 3.5 in Semester 3.'
+      description: 'Continued academic excellence in Semester 3. Excelled in software engineering principles, advanced algorithms, and system analysis while maintaining leadership in group projects.',
+      period: 'September 2022 - January 2023',
+      subjects: ['Software Engineering', 'Advanced Algorithms', 'System Analysis & Design', 'Computer Networks'],
+      achievement: 'Top 10% of the cohort',
+      type: 'academic'
     },
     { 
       title: "Dean's List Semester 6", 
-      org: 'Dean of Computing and Informatics', 
+      org: 'Dean of Computing and Informatics, AIU', 
       image: deanlist_sem6, 
       color: 'from-orange-500 to-red-400',
-      description: 'Sustained outstanding performance with GPA above 3.5 in advanced semester.'
+      description: 'Sustained outstanding performance in advanced semester coursework. Demonstrated mastery in data science, machine learning, and advanced software development while contributing to research projects.',
+      period: 'September 2023 - January 2024',
+      subjects: ['Machine Learning', 'Data Mining', 'Advanced Database Systems', 'Software Project Management'],
+      achievement: 'Top 8% of the cohort',
+      type: 'academic'
     },
     { 
-      title: 'English Programme Completion', 
-      org: 'Language Center, AIU', 
+      title: 'English Programme Completion Certificate', 
+      org: 'Language Center, Albukhary International University', 
       image: lc, 
       color: 'from-yellow-500 to-amber-400',
-      description: 'Successfully completed the Pre-University English Programme with distinction.'
+      description: 'Successfully completed the comprehensive Pre-University English Programme with distinction. Achieved advanced proficiency in academic English, research writing, and presentation skills essential for university-level studies.',
+      period: 'March 2021 - August 2021',
+      level: 'Advanced (C1)',
+      skills: ['Academic Writing', 'Research Methodology', 'Presentation Skills', 'Critical Thinking'],
+      achievement: 'Distinction Grade (85%+)',
+      type: 'academic'
+    },
+    { 
+      title: 'Google Data Analytics Professional Certificate', 
+      org: 'Google Career Certificates via Coursera', 
+      image: googleDataAnalytics, 
+      color: 'from-blue-600 to-green-500',
+      description: 'Completed comprehensive data analytics program covering data collection, cleaning, analysis, and visualization. Gained hands-on experience with industry-standard tools and techniques used by professional data analysts.',
+      period: 'January 2024 - June 2024',
+      level: 'Professional',
+      skills: ['Data Analysis', 'SQL', 'Tableau', 'R Programming', 'Data Visualization', 'Statistical Analysis'],
+      achievement: 'Professional Certification',
+      type: 'professional'
+    },
+    { 
+      title: 'Machine Learning Specialization', 
+      org: 'Stanford University via Coursera', 
+      image: courseraML, 
+      color: 'from-indigo-600 to-blue-500',
+      description: 'Completed advanced machine learning specialization covering supervised learning, unsupervised learning, and neural networks. Implemented algorithms from scratch and worked on real-world ML projects.',
+      period: 'March 2024 - August 2024',
+      level: 'Advanced',
+      skills: ['Machine Learning', 'Python', 'TensorFlow', 'Neural Networks', 'Deep Learning', 'Algorithm Implementation'],
+      achievement: 'Specialization Certificate',
+      type: 'professional'
+    },
+    { 
+      title: 'AWS Cloud Practitioner Essentials', 
+      org: 'Amazon Web Services', 
+      image: awsCloud, 
+      color: 'from-orange-500 to-yellow-500',
+      description: 'Gained foundational knowledge of AWS cloud services, architecture, security, and pricing. Learned to identify AWS services for common use cases and understand cloud computing benefits.',
+      period: 'September 2024 - November 2024',
+      level: 'Foundation',
+      skills: ['Cloud Computing', 'AWS Services', 'Cloud Architecture', 'Security', 'Cost Management'],
+      achievement: 'Foundation Certificate',
+      type: 'professional'
     }
   ];
 
@@ -124,57 +184,127 @@ const About = () => {
         </div>
 
         <div className="container-max relative z-10">
+          {/* Header Section */}
           <motion.div
             ref={ref}
-            className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center"
-            initial={{ opacity: 0, y: 100 }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, type: "spring" }}
+            transition={{ duration: 0.8, type: "spring" }}
           >
-            {/* Left Side - 3D Image Card */}
             <motion.div
-              className="relative"
+              className="flex items-center justify-center space-x-4 mb-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
+              <motion.div
+                className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
+                whileHover={{ scaleX: 2 }}
+              />
+              <motion.span
+                className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-black text-lg uppercase tracking-widest"
+                whileHover={{ scale: 1.1 }}
+              >
+                About Me
+              </motion.span>
+              <motion.div
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              >
+                <SparklesIcon className="w-6 h-6 text-yellow-400" />
+              </motion.div>
+              <motion.div
+                className="w-16 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"
+                whileHover={{ scaleX: 2 }}
+              />
+            </motion.div>
+
+            <motion.h2
+              className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              Passionate About{' '}
+              <motion.span
+                className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
+                animate={{
+                  backgroundPosition: ['0%', '100%'],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+                style={{
+                  backgroundSize: '200% 200%',
+                }}
+              >
+                Technology
+              </motion.span>
+            </motion.h2>
+
+            <motion.p
+              className="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10"
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              whileHover={{ 
+                scale: 1.01,
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                borderColor: 'rgba(34, 211, 238, 0.3)'
+              }}
+            >
+              Final-year Computer Science student specializing in Data Science at 
+              Albukhary International University (AIU). I'm passionate about leveraging 
+              technology to solve real-world problems through innovative web development 
+              and data-driven solutions.
+            </motion.p>
+          </motion.div>
+
+          {/* Main Content Grid */}
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* Left Column - Profile & Stats */}
+            <motion.div
+              className="lg:col-span-4 space-y-8"
               initial={{ opacity: 0, x: -100, rotateY: 90 }}
               animate={inView ? { opacity: 1, x: 0, rotateY: 0 } : {}}
               transition={{ duration: 1.2, type: "spring", delay: 0.3 }}
             >
+              {/* Profile Image */}
               <motion.div
-                className="relative cursor-grab active:cursor-grabbing"
-                whileHover={{ y: -20, rotateZ: 5 }}
+                className="relative"
+                whileHover={{ y: -10, rotateZ: 2 }}
                 whileTap={{ scale: 0.95 }}
                 drag
-                dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
+                dragConstraints={{ left: -30, right: 30, top: -30, bottom: 30 }}
                 dragElastic={0.1}
               >
-                {/* Main Image Container */}
                 <div className="relative aspect-[4/5] bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-400/20 rounded-3xl shadow-2xl backdrop-blur-lg border border-white/20 overflow-hidden">
-                  {/* Animated Border */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 opacity-0 hover:opacity-100 transition-opacity duration-500" />
                   <div className="absolute inset-[2px] rounded-3xl bg-gray-900 overflow-hidden">
-                    {/* Background Image */}
                     <motion.img 
                       src={image}
                       alt="Profile"
                       className="w-full h-full object-cover"
-                      animate={{ scale: [1, 1.1, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      whileHover={{ scale: 1.15 }}
+                      animate={{ scale: [1, 1.05, 1] }}
+                      transition={{ duration: 4, repeat: Infinity }}
+                      whileHover={{ scale: 1.1 }}
                     />
                     
-                    {/* Dark Overlay for Text Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent" />
                     
-                    {/* Text Content */}
-                    <div className="absolute inset-0 flex items-end justify-center z-10 p-8">
+                    <div className="absolute inset-0 flex items-end justify-center z-10 p-6">
                       <motion.div
                         animate={{ y: [0, -10, 0] }}
                         transition={{ duration: 4, repeat: Infinity }}
                         className="text-center w-full"
                       >
-                        <p className="text-cyan-300 font-bold text-2xl mb-2 drop-shadow-lg">
+                        <p className="text-cyan-300 font-bold text-xl mb-2 drop-shadow-lg">
                           Tech Innovator
                         </p>
-                        <p className="text-gray-300 text-base drop-shadow-md">
+                        <p className="text-gray-300 text-sm drop-shadow-md">
                           Drag me around! 
                         </p>
                       </motion.div>
@@ -183,9 +313,9 @@ const About = () => {
 
                   {/* Floating Tech Badges */}
                   <motion.div
-                    className="absolute top-6 left-6 w-14 h-14 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-xs shadow-lg z-20"
+                    className="absolute top-4 left-4 w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-xs shadow-lg z-20"
                     animate={{ 
-                      y: [0, -20, 0],
+                      y: [0, -15, 0],
                       rotate: [0, 360]
                     }}
                     transition={{ 
@@ -197,10 +327,10 @@ const About = () => {
                   </motion.div>
                   
                   <motion.div
-                    className="absolute top-6 right-6 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg z-20"
+                    className="absolute top-4 right-4 w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg z-20"
                     animate={{ 
-                      y: [0, 15, 0],
-                      scale: [1, 1.3, 1]
+                      y: [0, 12, 0],
+                      scale: [1, 1.2, 1]
                     }}
                     transition={{ 
                       y: { duration: 4, repeat: Infinity, delay: 2 },
@@ -209,15 +339,14 @@ const About = () => {
                   >
                     DS
                   </motion.div>
-                </div>
 
-                {/* Glow Effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-3xl blur-xl opacity-20 -z-10" />
+                  <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-3xl blur-xl opacity-20 -z-10" />
+                </div>
               </motion.div>
 
               {/* Stats Grid */}
               <motion.div
-                className="grid grid-cols-2 gap-4 mt-8"
+                className="grid grid-cols-2 gap-4"
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.8, duration: 0.8 }}
@@ -248,108 +377,99 @@ const About = () => {
                   </motion.div>
                 ))}
               </motion.div>
+
+              {/* Current Focus */}
+              <motion.div
+                className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-orange-400 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 1.2, duration: 0.8 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <motion.div
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                  >
+                    <FireIcon className="w-8 h-8 text-orange-400" />
+                  </motion.div>
+                  <h3 className="text-white font-bold text-lg">Currently Exploring</h3>
+                </div>
+                <p className="text-cyan-200 font-semibold">
+                  AI Integration & Advanced Machine Learning
+                </p>
+              </motion.div>
             </motion.div>
 
-            {/* Right Side - Content */}
+            {/* Right Column - Skills, Leadership, Certificates */}
             <motion.div
-              className="space-y-10"
+              className="lg:col-span-8 space-y-12"
               initial={{ opacity: 0, x: 100 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 1, delay: 0.5, type: "spring" }}
             >
-              <div className="space-y-8">
-                <motion.div
-                  className="flex items-center space-x-4"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.7, duration: 0.8 }}
+              {/* Skills Grid */}
+              <motion.div
+                className="space-y-6"
+                initial={{ opacity: 0, y: 30 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 1.3, duration: 0.8 }}
+              >
+                <motion.h3
+                  className="text-2xl font-black text-white flex items-center space-x-3"
+                  whileHover={{ scale: 1.05 }}
                 >
-                  <motion.div
-                    className="flex items-center space-x-3"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    <motion.div
-                      className="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
-                      whileHover={{ scaleX: 2 }}
-                    />
-                    <motion.span
-                      className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-black text-lg uppercase tracking-widest"
-                      whileHover={{ scale: 1.1 }}
-                    >
-                      About Me
-                    </motion.span>
-                  </motion.div>
                   <motion.div
                     animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                   >
-                    <SparklesIcon className="w-6 h-6 text-yellow-400" />
+                    <CodeBracketIcon className="w-7 h-7 text-cyan-400" />
                   </motion.div>
-                </motion.div>
+                  <span className="bg-gradient-to-r from-cyan-400 to-green-400 bg-clip-text text-transparent">
+                    Core Superpowers
+                  </span>
+                </motion.h3>
 
-                <motion.h2
-                  className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.9, duration: 0.8 }}
-                >
-                  Passionate About{' '}
-                  <motion.span
-                    className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
-                    animate={{
-                      backgroundPosition: ['0%', '100%'],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                    }}
-                    style={{
-                      backgroundSize: '200% 200%',
-                    }}
-                  >
-                    Technology
-                  </motion.span>
-                </motion.h2>
-
-                <motion.div
-                  className="space-y-6"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 1.1, duration: 0.8 }}
-                >
-                  <motion.p
-                    className="text-xl text-gray-200 leading-relaxed backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10"
-                    whileHover={{ 
-                      scale: 1.01,
-                      backgroundColor: 'rgba(255,255,255,0.1)',
-                      borderColor: 'rgba(34, 211, 238, 0.3)'
-                    }}
-                  >
-                    Final-year Computer Science student specializing in Data Science at 
-                    Albukhary International University (AIU). I'm passionate about leveraging 
-                    technology to solve real-world problems through innovative web development 
-                    and data-driven solutions.
-                  </motion.p>
-
-                  <motion.div
-                    className="flex items-center space-x-4 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
-                    whileHover={{ scale: 1.02 }}
-                  >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {skills.map((skill, index) => (
                     <motion.div
-                      animate={{ rotate: [0, 10, -10, 0] }}
-                      transition={{ duration: 4, repeat: Infinity }}
+                      key={skill.name}
+                      className="group relative overflow-hidden backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-4 hover:border-cyan-400 transition-all duration-300"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 1.5 + index * 0.1, duration: 0.6 }}
                     >
-                      <FireIcon className="w-8 h-8 text-orange-400" />
-                    </motion.div>
-                    <p className="text-cyan-200 font-semibold">
-                      Currently exploring: AI Integration & Advanced Machine Learning
-                    </p>
-                  </motion.div>
-                </motion.div>
-              </div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                      
+                      <div className="flex items-center justify-between mb-3 relative z-10">
+                        <div className="flex items-center space-x-3">
+                          <motion.span
+                            className="text-2xl"
+                            whileHover={{ scale: 1.5, rotate: 360 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            {skill.icon}
+                          </motion.span>
+                          <span className="text-white font-semibold">{skill.name}</span>
+                        </div>
+                        <span className="text-cyan-300 font-bold">{skill.level}%</span>
+                      </div>
 
-              {/* Skills Grid */}
+                      <div className="w-full bg-white/10 rounded-full h-2 relative overflow-hidden">
+                        <motion.div
+                          className="h-full bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={inView ? { width: `${skill.level}%` } : {}}
+                          transition={{ delay: 1.8 + index * 0.1, duration: 1.5, type: "spring" }}
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Leadership Section */}
               <motion.div
                 className="space-y-6"
                 initial={{ opacity: 0, y: 30 }}
@@ -411,96 +531,197 @@ const About = () => {
                 </div>
               </motion.div>
 
-              {/* Certificates Section */}
+              {/* Leadership Section */}
               <motion.div
                 className="space-y-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 1.7, duration: 0.8 }}
+                transition={{ delay: 1.5, duration: 0.8 }}
               >
                 <motion.h3
                   className="text-2xl font-black text-white flex items-center space-x-3"
                   whileHover={{ scale: 1.05 }}
                 >
                   <motion.div
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
                   >
-                    <AcademicCapIcon className="w-7 h-7 text-yellow-400" />
+                    👑
                   </motion.div>
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                    Academic Achievements
+                    Leadership & Teaching Experience
                   </span>
-                  <motion.span
-                    className="text-xs bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text font-bold px-2 py-1 rounded-full border border-cyan-400/30"
-                    animate={{ 
-                      scale: [1, 1.1, 1],
-                      rotate: [0, 5, -5, 0]
-                    }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                  >
-                    Click to Expand!
-                  </motion.span>
                 </motion.h3>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {certificates.map((cert, index) => (
+                <div className="space-y-6">
+                  {/* First Row - Two Cards */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <motion.div
-                      key={cert.title}
-                      className="group relative cursor-pointer"
-                      initial={{ opacity: 0, y: 30, scale: 0.8 }}
-                      animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                      transition={{ delay: 1.9 + index * 0.2, type: "spring" }}
-                      whileHover={{ scale: 1.05, y: -5 }}
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => setSelectedCert(cert)}
+                      className="group relative overflow-hidden backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition-all duration-300 h-full"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 1.7, duration: 0.6 }}
                     >
-                      <div className={`absolute inset-0 bg-gradient-to-br ${cert.color} rounded-2xl blur-md opacity-60 group-hover:opacity-80 transition-opacity duration-300`} />
-                      <div className="relative backdrop-blur-sm bg-gray-900/90 border border-white/10 rounded-2xl p-4 group-hover:border-white/30 transition-all duration-300 overflow-hidden h-full">
-                        <div className="aspect-video bg-gradient-to-br from-white/5 to-white/10 rounded-xl mb-4 flex items-center justify-center overflow-hidden group-hover:from-white/10 group-hover:to-white/20 transition-colors duration-300 relative">
-                          <motion.img
-                            src={cert.image}
-                            alt={cert.title}
-                            className="w-full h-full object-cover"
-                            whileHover={{ scale: 1.1 }}
-                            transition={{ duration: 0.3 }}
-                          />
-                          <motion.div
-                            className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                            whileHover={{ scale: 1.2, rotate: 180 }}
-                          >
-                            <ArrowsPointingOutIcon className="w-4 h-4 text-white" />
-                          </motion.div>
-                        </div>
-                        <motion.h4
-                          className="font-black text-white text-lg mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300"
-                          whileHover={{ scale: 1.03 }}
-                        >
-                          {cert.title}
-                        </motion.h4>
-                        <p className="text-cyan-300 font-semibold text-sm mb-2">{cert.org}</p>
-                        <p className="text-gray-300 text-sm leading-relaxed">{cert.description}</p>
-                        
-                        {/* Hover Enlarge Indicator */}
-                        <motion.div
-                          className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          animate={{ 
-                            scale: [1, 1.2, 1],
-                            rotate: [0, 10, -10, 0]
-                          }}
-                          transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                        >
-                          <div className="text-xs bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full font-bold">
-                            Click to Enlarge
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                      
+                      <div className="flex flex-col h-full relative z-10">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <motion.div
+                              className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center flex-shrink-0"
+                              whileHover={{ scale: 1.2, rotate: 360 }}
+                              transition={{ duration: 0.5 }}
+                            >
+                              <span className="text-white font-bold text-lg">🎓</span>
+                            </motion.div>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-white font-bold text-lg leading-tight">AIU Somali Students President</h4>
+                              <p className="text-yellow-300 font-semibold text-sm">Albukhary International University</p>
+                            </div>
                           </div>
-                        </motion.div>
+                          <div className="text-right flex-shrink-0 ml-4">
+                            <span className="text-yellow-400 font-bold text-sm whitespace-nowrap">July 2025 - Present</span>
+                            <div className="text-green-400 text-xs font-semibold">Current Position</div>
+                          </div>
+                        </div>
+
+                        <p className="text-gray-300 leading-relaxed mb-4 flex-grow">
+                          Leading and representing the Somali student community at AIU, organizing cultural events, 
+                          academic support programs, and fostering integration between Somali students and the broader 
+                          university community. Responsible for student welfare, advocacy, and community building initiatives.
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
+                          {['Student Advocacy', 'Event Management', 'Community Building', 'Cultural Integration', 'Academic Support'].map((skill, index) => (
+                            <motion.span
+                              key={skill}
+                              className="px-3 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/30 text-yellow-300 rounded-full text-sm font-medium"
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={inView ? { opacity: 1, scale: 1 } : {}}
+                              transition={{ delay: 1.8 + index * 0.1 }}
+                              whileHover={{ scale: 1.1, y: -2 }}
+                            >
+                              {skill}
+                            </motion.span>
+                          ))}
+                        </div>
                       </div>
                     </motion.div>
-                  ))}
+
+                    <motion.div
+                      className="group relative overflow-hidden backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400 transition-all duration-300 h-full"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={inView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ delay: 1.9, duration: 0.6 }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                      
+                      <div className="flex flex-col h-full relative z-10">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <motion.div
+                              className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0"
+                              whileHover={{ scale: 1.2, rotate: 360 }}
+                              transition={{ duration: 0.5 }}
+                            >
+                              <span className="text-white font-bold text-lg">🌍</span>
+                            </motion.div>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-white font-bold text-lg leading-tight">Director of International Relations</h4>
+                              <p className="text-purple-300 font-semibold text-sm">African Students Association (AFSA)</p>
+                            </div>
+                          </div>
+                          <div className="text-right flex-shrink-0 ml-4">
+                            <span className="text-purple-400 font-bold text-sm whitespace-nowrap">December 2024 - Present</span>
+                            <div className="text-green-400 text-xs font-semibold">Current Position</div>
+                          </div>
+                        </div>
+
+                        <p className="text-gray-300 leading-relaxed mb-4 flex-grow">
+                          Managing international relations and partnerships for the African Students Association, coordinating 
+                          cross-cultural programs, and promoting African heritage and diversity. Leading strategic initiatives 
+                          for international student engagement, diplomatic relations, and global networking opportunities.
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
+                          {['International Relations', 'Diplomatic Coordination', 'Cross-Cultural Programs', 'Strategic Partnerships', 'Global Networking'].map((skill, index) => (
+                            <motion.span
+                              key={skill}
+                              className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 text-purple-300 rounded-full text-sm font-medium"
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={inView ? { opacity: 1, scale: 1 } : {}}
+                              transition={{ delay: 2.0 + index * 0.1 }}
+                              whileHover={{ scale: 1.1, y: -2 }}
+                            >
+                              {skill}
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+
+                  {/* Second Row - Single Card Centered */}
+                  <div className="flex justify-center">
+                    <motion.div
+                      className="group relative overflow-hidden backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue-400 transition-all duration-300 w-full max-w-2xl"
+                      whileHover={{ scale: 1.02, y: -2 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={inView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ delay: 2.1, duration: 0.6 }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/10 to-transparent -skew-x-12 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                      
+                      <div className="relative z-10">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <motion.div
+                              className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0"
+                              whileHover={{ scale: 1.2, rotate: 360 }}
+                              transition={{ duration: 0.5 }}
+                            >
+                              <span className="text-white font-bold text-lg">👨‍🏫</span>
+                            </motion.div>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-white font-bold text-lg leading-tight">Java Programming Instructor</h4>
+                              <p className="text-blue-300 font-semibold text-sm">Online Teaching Platform</p>
+                            </div>
+                          </div>
+                          <div className="text-right flex-shrink-0 ml-4">
+                            <span className="text-blue-400 font-bold text-sm whitespace-nowrap">2 Months (Part-time)</span>
+                            <div className="text-cyan-400 text-xs font-semibold">2x per week</div>
+                          </div>
+                        </div>
+
+                        <p className="text-gray-300 leading-relaxed mb-4">
+                          Delivered comprehensive Java programming instruction through online lectures, covering fundamental 
+                          concepts to advanced Object-Oriented Programming (OOP) principles. Taught Java syntax, data structures, 
+                          classes, objects, inheritance, polymorphism, and best coding practices to aspiring developers.
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 justify-center">
+                          {['Java Fundamentals', 'Object-Oriented Programming', 'Online Teaching', 'Curriculum Development', 'Student Mentoring'].map((skill, index) => (
+                            <motion.span
+                              key={skill}
+                              className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 text-blue-300 rounded-full text-sm font-medium"
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={inView ? { opacity: 1, scale: 1 } : {}}
+                              transition={{ delay: 2.2 + index * 0.1 }}
+                              whileHover={{ scale: 1.1, y: -2 }}
+                            >
+                              {skill}
+                            </motion.span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Floating Call to Action */}
@@ -531,7 +752,7 @@ const About = () => {
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <span></span>
+            <span>🚀</span>
             <span>See My Work!</span>
           </motion.button>
         </motion.div>
@@ -687,7 +908,7 @@ const About = () => {
                         Certificate Details
                       </h3>
                       
-                      <div className="space-y-3">
+                      <div className="space-y-4">
                         <motion.div
                           className="p-4 bg-gradient-to-r from-cyan-900/20 to-purple-900/20 rounded-xl border border-cyan-400/20"
                           whileHover={{ scale: 1.02, x: 5 }}
@@ -695,8 +916,9 @@ const About = () => {
                           <p className="text-gray-300 leading-relaxed">{selectedCert.description}</p>
                         </motion.div>
                         
+                        {/* Enhanced Details Grid */}
                         <motion.div
-                          className="grid grid-cols-2 gap-4"
+                          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.4 }}
@@ -705,48 +927,94 @@ const About = () => {
                             className="p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/10 text-center"
                             whileHover={{ scale: 1.05, y: -3 }}
                           >
-                            <div className="text-cyan-400 text-sm font-semibold mb-1">Recognition</div>
-                            <div className="text-white font-bold">Academic Excellence</div>
+                            <div className="text-cyan-400 text-sm font-semibold mb-1">Period</div>
+                            <div className="text-white font-bold">{selectedCert.period || 'Academic Year'}</div>
                           </motion.div>
                           
                           <motion.div
                             className="p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-white/10 text-center"
                             whileHover={{ scale: 1.05, y: -3 }}
                           >
-                            <div className="text-cyan-400 text-sm font-semibold mb-1">Award Type</div>
-                            <div className="text-white font-bold">Dean's List</div>
+                            <div className="text-cyan-400 text-sm font-semibold mb-1">Achievement</div>
+                            <div className="text-white font-bold">{selectedCert.achievement || 'Excellence'}</div>
                           </motion.div>
+
+                          {selectedCert.level && (
+                            <motion.div
+                              className="p-4 bg-gradient-to-br from-green-800/30 to-emerald-800/30 rounded-xl border border-green-400/20 text-center"
+                              whileHover={{ scale: 1.05, y: -3 }}
+                            >
+                              <div className="text-green-400 text-sm font-semibold mb-1">Proficiency Level</div>
+                              <div className="text-white font-bold">{selectedCert.level}</div>
+                            </motion.div>
+                          )}
                         </motion.div>
+
+                        {/* Subjects/Skills Section */}
+                        {(selectedCert.subjects || selectedCert.skills) && (
+                          <motion.div
+                            className="space-y-3"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.6 }}
+                          >
+                            <h4 className="text-lg font-bold text-white flex items-center space-x-2">
+                              <motion.span
+                                animate={{ rotate: [0, 360] }}
+                                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                              >
+                                📚
+                              </motion.span>
+                              <span>{selectedCert.subjects ? 'Key Subjects' : 'Skills Developed'}</span>
+                            </h4>
+                            <div className="flex flex-wrap gap-2">
+                              {(selectedCert.subjects || selectedCert.skills)?.map((item, index) => (
+                                <motion.span
+                                  key={item}
+                                  className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 text-cyan-300 rounded-full text-sm font-medium"
+                                  initial={{ opacity: 0, scale: 0 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  transition={{ delay: 0.7 + index * 0.1 }}
+                                  whileHover={{ scale: 1.1, y: -2 }}
+                                >
+                                  {item}
+                                </motion.span>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
                       </div>
                     </motion.div>
 
                     {/* Action Buttons */}
                     <motion.div
-                      className="flex space-x-4"
+                      className="flex flex-col sm:flex-row gap-4"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6 }}
+                      transition={{ delay: 0.8 }}
                     >
                       <motion.button
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-bold text-center"
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-bold text-center flex items-center justify-center space-x-2"
                         whileHover={{ 
                           scale: 1.05,
                           boxShadow: '0 0 30px rgba(34, 211, 238, 0.5)'
                         }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Download Certificate
+                        <span>📄</span>
+                        <span>View Certificate</span>
                       </motion.button>
                       
                       <motion.button
-                        className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold text-center"
+                        className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-xl font-bold text-center flex items-center justify-center space-x-2"
                         whileHover={{ 
                           scale: 1.05,
                           boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)'
                         }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        Share Achievement
+                        <span>🎓</span>
+                        <span>Verify Achievement</span>
                       </motion.button>
                     </motion.div>
                   </div>

@@ -1,0 +1,48 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg1)" rx="20"/>
+  
+  <!-- Network nodes representing students -->
+  <circle cx="100" cy="80" r="25" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="200" cy="60" r="25" fill="#0891b2" opacity="0.8"/>
+  <circle cx="300" cy="90" r="25" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="150" cy="150" r="25" fill="#0891b2" opacity="0.8"/>
+  <circle cx="250" cy="140" r="25" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="120" cy="220" r="25" fill="#0891b2" opacity="0.8"/>
+  <circle cx="280" cy="210" r="25" fill="#06b6d4" opacity="0.8"/>
+  
+  <!-- Connection lines -->
+  <line x1="100" y1="80" x2="200" y2="60" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="60" x2="300" y2="90" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  <line x1="100" y1="80" x2="150" y2="150" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  <line x1="200" y1="60" x2="250" y2="140" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  <line x1="150" y1="150" x2="250" y2="140" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  <line x1="150" y1="150" x2="120" y2="220" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  <line x1="250" y1="140" x2="280" y2="210" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Chat bubbles -->
+  <rect x="320" y="40" width="60" height="30" fill="#22d3ee" rx="15" opacity="0.9"/>
+  <rect x="20" y="120" width="60" height="30" fill="#0891b2" rx="15" opacity="0.9"/>
+  <rect x="320" y="180" width="60" height="30" fill="#06b6d4" rx="15" opacity="0.9"/>
+  
+  <!-- University building icon -->
+  <rect x="180" y="180" width="40" height="30" fill="#1e40af" opacity="0.8"/>
+  <polygon points="180,180 200,160 220,180" fill="#1e40af" opacity="0.8"/>
+  <rect x="185" y="190" width="8" height="15" fill="#22d3ee"/>
+  <rect x="207" y="190" width="8" height="15" fill="#22d3ee"/>
+  
+  <!-- Title -->
+  <text x="200" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">AIU Students Hub</text>
+  <text x="200" y="260" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="12">Connecting • Sharing • Growing</text>
+</svg>

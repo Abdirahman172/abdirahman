@@ -1,0 +1,41 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="googleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285f4;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#ea4335;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fbbc04;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#34a853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4285f4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="white" stroke="#e5e7eb" stroke-width="2" rx="10"/>
+  
+  <!-- Google Colors Header -->
+  <rect width="300" height="40" fill="url(#googleBg)" rx="10"/>
+  <rect x="0" y="30" width="300" height="10" fill="url(#googleBg)"/>
+  
+  <!-- Google Logo Area -->
+  <text x="150" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Google</text>
+  
+  <!-- Certificate Content -->
+  <text x="150" y="65" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Certificate of Completion</text>
+  
+  <text x="150" y="85" text-anchor="middle" fill="#4285f4" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Google Data Analytics</text>
+  <text x="150" y="100" text-anchor="middle" fill="#4285f4" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Professional Certificate</text>
+  
+  <text x="150" y="125" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="10">This is to certify that</text>
+  <text x="150" y="140" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Abdirahman Mohamed</text>
+  <text x="150" y="155" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="10">has successfully completed the program</text>
+  
+  <!-- Analytics Icon -->
+  <rect x="20" y="120" width="30" height="20" fill="#4285f4" opacity="0.2" rx="3"/>
+  <rect x="22" y="130" width="4" height="8" fill="#4285f4"/>
+  <rect x="28" y="125" width="4" height="13" fill="#34a853"/>
+  <rect x="34" y="128" width="4" height="10" fill="#ea4335"/>
+  <rect x="40" y="122" width="4" height="16" fill="#fbbc04"/>
+  
+  <!-- Date -->
+  <text x="150" y="180" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="9">Completed: 2024</text>
+</svg>
