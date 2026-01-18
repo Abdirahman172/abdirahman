@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { AcademicCapIcon, XMarkIcon, ArrowsPointingOutIcon, TrophyIcon, StarIcon } from '@heroicons/react/24/outline';
+import { AcademicCapIcon, XMarkIcon, ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
 import deanlist_sem1 from '../images/deanlist_sem1.jpeg';
 import deanlist_sem2 from '../images/deanlist_sem2.jpeg';
 import deanlist_sem3 from '../images/deanlist_sem3.jpeg';
@@ -14,7 +14,7 @@ const Certificates = () => {
     threshold: 0.1,
   });
 
-  const [selectedCert, setSelectedCert] = useState(null);
+  const [selectedCert, setSelectedCert] = useState<any>(null);
   const [modalHover, setModalHover] = useState(false);
 
   const certificates = [
