@@ -7,9 +7,6 @@ import deanlist_sem2 from '../images/deanlist_sem2.jpeg';
 import deanlist_sem3 from '../images/deanlist_sem3.jpeg';
 import deanlist_sem6 from '../images/deanlist_sem6.jpeg';
 import lc from '../images/Lc.jpeg';
-import awsCloud from '../images/aws-cloud.png';
-import courseraMl from '../images/coursera-ml.png';
-import googleDataAnalytics from '../images/google-data-analytics.png';
 
 const Certificates = () => {
   const [ref, inView] = useInView({
@@ -80,47 +77,11 @@ const Certificates = () => {
       skills: ['Academic Writing', 'Research Methodology', 'Presentation Skills', 'Critical Thinking'],
       achievement: 'Distinction Grade (85%+)',
       category: 'Language Proficiency'
-    },
-    { 
-      title: 'AWS Cloud Practitioner', 
-      org: 'Amazon Web Services', 
-      image: awsCloud, 
-      color: 'from-orange-500 to-yellow-400',
-      description: 'Demonstrated foundational knowledge of AWS Cloud concepts, services, security, architecture, pricing, and support. This certification validates understanding of cloud computing fundamentals and AWS core services.',
-      period: 'Completed 2023',
-      level: 'Foundational',
-      skills: ['Cloud Computing', 'AWS Services', 'Cloud Security', 'Cost Management'],
-      achievement: 'Industry Recognized Certification',
-      category: 'Cloud Computing'
-    },
-    { 
-      title: 'Machine Learning Course Certificate', 
-      org: 'Coursera - Stanford University', 
-      image: courseraMl, 
-      color: 'from-blue-500 to-purple-400',
-      description: 'Completed comprehensive machine learning course covering supervised and unsupervised learning, neural networks, and practical implementation. Gained hands-on experience with algorithms and real-world applications.',
-      period: 'Completed 2023',
-      level: 'Intermediate',
-      skills: ['Machine Learning', 'Python', 'Neural Networks', 'Data Analysis'],
-      achievement: 'Course Completion with Honors',
-      category: 'Data Science'
-    },
-    { 
-      title: 'Google Data Analytics Certificate', 
-      org: 'Google Career Certificates', 
-      image: googleDataAnalytics, 
-      color: 'from-green-500 to-blue-400',
-      description: 'Comprehensive program covering data analysis fundamentals, data visualization, SQL, R programming, and Tableau. Developed skills in data cleaning, analysis, and creating compelling data stories.',
-      period: 'Completed 2023',
-      level: 'Professional',
-      skills: ['Data Analysis', 'SQL', 'R Programming', 'Tableau', 'Data Visualization'],
-      achievement: 'Google Career Certificate',
-      category: 'Data Analytics'
     }
   ];
 
   const stats = [
-    { number: '9', label: 'Certificates Earned', icon: '🏆' },
+    { number: '5', label: 'Certificates Earned', icon: '🏆' },
     { number: '3.75', label: 'Average GPA', icon: '📊' },
     { number: '4', label: 'Dean\'s List Awards', icon: '🌟' },
     { number: '100%', label: 'Commitment', icon: '💪' }
