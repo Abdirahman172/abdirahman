@@ -7,7 +7,7 @@ import deanlist_sem1 from '../images/deanlist_sem1.jpeg';
 import deanlist_sem2 from '../images/deanlist_sem2.jpeg';
 import deanlist_sem3 from '../images/deanlist_sem3.jpeg';
 import deanlist_sem6 from '../images/deanlist_sem6.jpeg';
-import lc from '../images/lc.jpeg';
+import lc from '../images/Lc.jpeg';
 import googleDataAnalytics from '../images/google-data-analytics.png';
 import courseraML from '../images/coursera-ml.png';
 import awsCloud from '../images/aws-cloud.png';
