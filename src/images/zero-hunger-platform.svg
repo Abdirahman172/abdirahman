@@ -1,0 +1,59 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#166534;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="earth" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg2)" rx="20"/>
+  
+  <!-- Earth/Globe -->
+  <circle cx="200" cy="150" r="80" fill="url(#earth)" opacity="0.8"/>
+  
+  <!-- Continents (simplified) -->
+  <path d="M160 120 Q180 110 200 120 Q220 115 240 125 Q235 140 220 145 Q200 150 180 145 Q165 140 160 120" fill="#047857" opacity="0.9"/>
+  <path d="M170 160 Q190 155 210 165 Q225 170 230 185 Q215 190 195 185 Q175 180 170 160" fill="#047857" opacity="0.9"/>
+  
+  <!-- Food items around the globe -->
+  <!-- Apple -->
+  <circle cx="120" cy="100" r="12" fill="#ef4444"/>
+  <rect x="125" y="95" width="2" height="8" fill="#16a34a"/>
+  
+  <!-- Bread -->
+  <ellipse cx="280" cy="110" rx="15" ry="8" fill="#f59e0b"/>
+  <ellipse cx="280" cy="110" rx="12" ry="6" fill="#fbbf24"/>
+  
+  <!-- Vegetables -->
+  <circle cx="100" cy="200" r="10" fill="#22c55e"/>
+  <circle cx="110" cy="195" r="8" fill="#16a34a"/>
+  
+  <!-- Rice/Grain -->
+  <ellipse cx="300" cy="190" rx="12" ry="15" fill="#fbbf24"/>
+  
+  <!-- Arrows showing distribution -->
+  <path d="M140 120 Q160 100 180 110" stroke="#22d3ee" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M260 130 Q240 110 220 120" stroke="#22d3ee" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M120 180 Q140 160 160 170" stroke="#22d3ee" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M280 170 Q260 160 240 170" stroke="#22d3ee" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+  </defs>
+  
+  <!-- Hands reaching towards food (helping) -->
+  <path d="M80 150 Q90 140 100 150 Q95 160 85 155" fill="#fbbf24" opacity="0.8"/>
+  <path d="M320 150 Q310 140 300 150 Q305 160 315 155" fill="#fbbf24" opacity="0.8"/>
+  
+  <!-- Title -->
+  <text x="200" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Zero Hunger Platform</text>
+  <text x="200" y="270" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="12">Reducing Waste • Feeding Communities</text>
+</svg>

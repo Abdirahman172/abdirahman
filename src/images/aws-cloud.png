@@ -1,0 +1,37 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="awsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6600;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="white" stroke="#e5e7eb" stroke-width="2" rx="10"/>
+  
+  <!-- AWS Header -->
+  <rect width="300" height="40" fill="url(#awsBg)" rx="10"/>
+  <rect x="0" y="30" width="300" height="10" fill="url(#awsBg)"/>
+  
+  <!-- AWS Logo -->
+  <text x="150" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AWS</text>
+  
+  <!-- Certificate Content -->
+  <text x="150" y="65" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Certificate of Completion</text>
+  
+  <text x="150" y="85" text-anchor="middle" fill="#ff9900" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AWS Cloud Practitioner</text>
+  <text x="150" y="100" text-anchor="middle" fill="#ff9900" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Essentials</text>
+  
+  <text x="150" y="125" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="10">This is to certify that</text>
+  <text x="150" y="140" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Abdirahman Mohamed</text>
+  <text x="150" y="155" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="10">has successfully completed the course</text>
+  
+  <!-- Cloud Icon -->
+  <ellipse cx="35" cy="135" rx="15" ry="8" fill="#ff9900" opacity="0.2"/>
+  <circle cx="25" cy="135" r="5" fill="#ff9900" opacity="0.3"/>
+  <circle cx="35" cy="130" r="6" fill="#ff9900" opacity="0.3"/>
+  <circle cx="45" cy="135" r="4" fill="#ff9900" opacity="0.3"/>
+  
+  <!-- Date -->
+  <text x="150" y="180" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="9">Completed: 2024</text>
+</svg>
