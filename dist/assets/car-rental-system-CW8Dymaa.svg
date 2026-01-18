@@ -1,0 +1,90 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="car1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="car2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg3)" rx="20"/>
+  
+  <!-- Road -->
+  <rect x="0" y="200" width="400" height="60" fill="#374151" opacity="0.8"/>
+  <rect x="0" y="225" width="400" height="4" fill="#fbbf24" opacity="0.6"/>
+  
+  <!-- Car 1 (Red) -->
+  <g transform="translate(80, 180)">
+    <!-- Car body -->
+    <rect x="0" y="15" width="80" height="25" fill="url(#car1)" rx="5"/>
+    <!-- Car roof -->
+    <rect x="15" y="5" width="50" height="15" fill="url(#car1)" rx="8"/>
+    <!-- Wheels -->
+    <circle cx="15" cy="45" r="8" fill="#1f2937"/>
+    <circle cx="65" cy="45" r="8" fill="#1f2937"/>
+    <!-- Windows -->
+    <rect x="20" y="8" width="15" height="10" fill="#22d3ee" opacity="0.7"/>
+    <rect x="45" y="8" width="15" height="10" fill="#22d3ee" opacity="0.7"/>
+    <!-- Headlights -->
+    <circle cx="78" cy="25" r="3" fill="#fbbf24"/>
+  </g>
+  
+  <!-- Car 2 (Blue) -->
+  <g transform="translate(220, 180)">
+    <!-- Car body -->
+    <rect x="0" y="15" width="80" height="25" fill="url(#car2)" rx="5"/>
+    <!-- Car roof -->
+    <rect x="15" y="5" width="50" height="15" fill="url(#car2)" rx="8"/>
+    <!-- Wheels -->
+    <circle cx="15" cy="45" r="8" fill="#1f2937"/>
+    <circle cx="65" cy="45" r="8" fill="#1f2937"/>
+    <!-- Windows -->
+    <rect x="20" y="8" width="15" height="10" fill="#22d3ee" opacity="0.7"/>
+    <rect x="45" y="8" width="15" height="10" fill="#22d3ee" opacity="0.7"/>
+    <!-- Headlights -->
+    <circle cx="78" cy="25" r="3" fill="#fbbf24"/>
+  </g>
+  
+  <!-- Management Dashboard -->
+  <rect x="50" y="60" width="300" height="100" fill="#1f2937" opacity="0.9" rx="10"/>
+  <rect x="60" y="70" width="280" height="10" fill="#22d3ee" opacity="0.8" rx="5"/>
+  
+  <!-- Dashboard elements -->
+  <rect x="70" y="90" width="60" height="30" fill="#10b981" opacity="0.8" rx="5"/>
+  <text x="100" y="108" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Available</text>
+  
+  <rect x="140" y="90" width="60" height="30" fill="#ef4444" opacity="0.8" rx="5"/>
+  <text x="170" y="108" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Rented</text>
+  
+  <rect x="210" y="90" width="60" height="30" fill="#f59e0b" opacity="0.8" rx="5"/>
+  <text x="240" y="108" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Maintenance</text>
+  
+  <rect x="280" y="90" width="60" height="30" fill="#8b5cf6" opacity="0.8" rx="5"/>
+  <text x="310" y="108" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">Reserved</text>
+  
+  <!-- Calendar/Booking icon -->
+  <rect x="70" y="130" width="25" height="20" fill="#22d3ee" opacity="0.8" rx="2"/>
+  <rect x="72" y="125" width="2" height="8" fill="#22d3ee"/>
+  <rect x="91" y="125" width="2" height="8" fill="#22d3ee"/>
+  <line x1="75" y1="135" x2="90" y2="135" stroke="white" stroke-width="1"/>
+  <line x1="75" y1="140" x2="85" y2="140" stroke="white" stroke-width="1"/>
+  <line x1="75" y1="145" x2="90" y2="145" stroke="white" stroke-width="1"/>
+  
+  <!-- Key icon -->
+  <circle cx="320" cy="140" r="8" fill="#fbbf24" opacity="0.8"/>
+  <rect x="325" y="138" width="12" height="4" fill="#fbbf24" opacity="0.8"/>
+  <rect x="335" y="136" width="2" height="2" fill="#fbbf24" opacity="0.8"/>
+  <rect x="335" y="140" width="2" height="2" fill="#fbbf24" opacity="0.8"/>
+  
+  <!-- Title -->
+  <text x="200" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Car Rental System</text>
+  <text x="200" y="280" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="12">Fleet Management • Booking • Analytics</text>
+</svg>
