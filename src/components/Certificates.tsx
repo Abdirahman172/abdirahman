@@ -161,7 +161,7 @@ const Certificates = () => {
                 className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-black text-lg uppercase tracking-widest"
                 whileHover={{ scale: 1.1 }}
               >
-                Academic Excellence
+                Academic Achievements
               </motion.span>
               <motion.div
                 className="w-16 h-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-full"
@@ -175,7 +175,7 @@ const Certificates = () => {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Certificates &{' '}
+              Academic{' '}
               <motion.span
                 className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400"
                 animate={{
@@ -245,47 +245,31 @@ const Certificates = () => {
 
           {/* Certificates Grid */}
           <motion.div
-            className="grid md:grid-cols-2 xl:grid-cols-3 gap-8"
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.2,
-                },
-              },
-            }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
             {certificates.map((cert, index) => (
               <motion.div
                 key={cert.title}
-                className="group relative cursor-pointer"
-                variants={{
-                  hidden: { y: 50, opacity: 0, scale: 0.8 },
-                  visible: {
-                    y: 0,
-                    opacity: 1,
-                    scale: 1,
-                    transition: {
-                      duration: 0.6,
-                      type: "spring",
-                    },
-                  },
-                }}
-                whileHover={{ y: -10, scale: 1.02 }}
+                className="group relative cursor-pointer h-full"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedCert(cert)}
               >
                 {/* Certificate Card */}
-                <div className="relative overflow-hidden rounded-3xl backdrop-blur-sm bg-white/5 border border-white/10 hover:border-yellow-400 transition-all duration-500">
-                  {/* Certificate Image Header */}
-                  <div className="relative aspect-video bg-gradient-to-br from-yellow-500/20 via-orange-500/20 to-red-500/20 overflow-hidden">
+                <div className="relative overflow-hidden rounded-2xl backdrop-blur-sm bg-white/5 border border-white/10 hover:border-yellow-400 transition-all duration-500 flex flex-col h-full shadow-lg">
+                  {/* Certificate Image */}
+                  <div className="relative w-full h-64 bg-gradient-to-br from-yellow-500/20 via-orange-500/20 to-red-500/20 overflow-hidden flex-shrink-0">
                     <img
                       src={cert.image}
                       alt={cert.title}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
                     />
 
                     {/* Hover Overlay */}
@@ -299,109 +283,47 @@ const Certificates = () => {
                         whileHover={{ scale: 1 }}
                       >
                         <ArrowsPointingOutIcon className="w-12 h-12 mx-auto mb-2" />
-                        <p className="font-bold text-lg">View Details</p>
+                        <p className="font-bold">View Details</p>
                       </motion.div>
                     </motion.div>
 
                     {/* Category Badge */}
                     <motion.div
-                      className="absolute top-4 left-4 px-3 py-1 backdrop-blur-sm bg-black/50 rounded-full text-white text-sm font-semibold"
+                      className="absolute top-3 left-3 px-3 py-1 backdrop-blur-sm bg-black/50 rounded-full text-white text-xs font-semibold"
                       whileHover={{ scale: 1.1 }}
                     >
                       {cert.category}
                     </motion.div>
-
-                    {/* Achievement Badge */}
-                    <motion.div
-                      className="absolute top-4 right-4 p-2 backdrop-blur-sm bg-yellow-500/20 rounded-full"
-                      animate={{ 
-                        rotate: [0, 10, -10, 0],
-                        scale: [1, 1.1, 1]
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    >
-                      <TrophyIcon className="w-5 h-5 text-yellow-400" />
-                    </motion.div>
                   </div>
 
                   {/* Certificate Content */}
-                  <div className="p-6">
-                    <motion.h3
-                      className="text-xl font-black text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-orange-400 transition-all duration-300"
+                  <div className="p-5 flex flex-col flex-grow">
+                    <h3 className="text-lg font-bold text-white mb-2 line-clamp-2">
+                      {cert.title}
+                    </h3>
+                    
+                    <p className="text-yellow-300 font-semibold text-xs mb-3 line-clamp-1">{cert.org}</p>
+                    
+                    <p className="text-gray-300 leading-relaxed text-sm mb-4">
+                      {cert.category}
+                    </p>
+                    
+                    <p className="text-gray-400 leading-relaxed text-sm flex-grow line-clamp-3">
+                      {cert.description.substring(0, 150)}...
+                    </p>
+                    
+                    <motion.div
+                      className="mt-4 text-center"
                       whileHover={{ scale: 1.05 }}
                     >
-                      {cert.title}
-                    </motion.h3>
-                    
-                    <p className="text-yellow-300 font-semibold text-sm mb-3">{cert.org}</p>
-                    
-                    <motion.p
-                      className="text-gray-300 mb-4 leading-relaxed text-sm"
-                      whileHover={{ x: 5 }}
-                    >
-                      {cert.description.substring(0, 120)}...
-                    </motion.p>
-                    
-                    {/* Achievement Info */}
-                    <div className="space-y-2 mb-4">
-                      {cert.gpa && (
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="text-gray-400">GPA:</span>
-                          <span className="text-yellow-400 font-bold">{cert.gpa}</span>
-                        </div>
-                      )}
-                      {cert.achievement && (
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="text-gray-400">Rank:</span>
-                          <span className="text-green-400 font-bold">{cert.achievement}</span>
-                        </div>
-                      )}
-                      {cert.level && (
-                        <div className="flex items-center justify-between text-xs">
-                          <span className="text-gray-400">Level:</span>
-                          <span className="text-blue-400 font-bold">{cert.level}</span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Action Button */}
-                    <motion.div
-                      className="flex items-center justify-between pt-4 border-t border-white/10"
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ delay: 0.3 }}
-                    >
-                      <motion.button
-                        className="text-yellow-400 font-semibold flex items-center space-x-2 hover:space-x-3 transition-all duration-300 group"
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <span>View Certificate</span>
-                        <ArrowsPointingOutIcon className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
-                      </motion.button>
-                      
-                      <div className="flex items-center space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <motion.div
-                            key={i}
-                            animate={{ 
-                              scale: [1, 1.2, 1],
-                              rotate: [0, 360]
-                            }}
-                            transition={{ 
-                              duration: 2, 
-                              repeat: Infinity, 
-                              delay: i * 0.2 
-                            }}
-                          >
-                            <StarIcon className="w-3 h-3 text-yellow-400 fill-current" />
-                          </motion.div>
-                        ))}
-                      </div>
+                      <button className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm transition-colors">
+                        View Details →
+                      </button>
                     </motion.div>
                   </div>
 
                   {/* Glow Effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-3xl blur-md opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10" />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-2xl blur-md opacity-0 group-hover:opacity-20 transition-opacity duration-500 -z-10" />
                 </div>
               </motion.div>
             ))}
